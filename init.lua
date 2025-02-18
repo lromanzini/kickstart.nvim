@@ -852,7 +852,11 @@ do
         -- python = true,
       }
       if enabled_filetypes[vim.bo[bufnr].filetype] then
-        return { timeout_ms = 500 }
+        return {
+          -- Leandro
+          -- Adjust the timeout for formatting because prettierd is a bit slow.
+          timeout_ms = 2000,
+        }
       else
         return nil
       end
@@ -867,7 +871,9 @@ do
       -- python = { "isort", "black" },
       --
       -- You can use 'stop_after_first' to run the first available formatter from the list
-      -- javascript = { "prettierd", "prettier", stop_after_first = true },
+      -- Leandro
+      -- Enable prettierd for javascript and typescript.
+      javascript = { 'prettierd', 'prettier', stop_after_first = true },
     },
   }
 
