@@ -758,6 +758,10 @@ do
     -- But for many setups, the LSP (`rust_analyzer`) will work just fine
     -- rust_analyzer = {},
 
+    -- Leandro
+    -- Ruby support
+    ruby_lsp = {},
+
     stylua = {}, -- Used to format Lua code
 
     -- Special Lua Config, as recommended by neovim help docs
