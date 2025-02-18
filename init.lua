@@ -691,7 +691,10 @@ require('lazy').setup({
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
-        --
+
+        -- Leandro
+        -- Ruby support
+        ruby_lsp = {},
 
         lua_ls = {
           -- cmd = { ... },
