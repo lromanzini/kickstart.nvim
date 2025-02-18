@@ -783,6 +783,12 @@ require('lazy').setup({
             lsp_format = 'fallback',
           }
         end
+        return {
+          -- Leandro
+          -- Adjust the timeout for formatting because prettierd is a bit slow.
+          timeout_ms = 2000,
+          lsp_format = lsp_format_opt,
+        }
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
@@ -790,7 +796,9 @@ require('lazy').setup({
         -- python = { "isort", "black" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        -- Leandro
+        -- Enable prettierd for javascript and typescript.
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
