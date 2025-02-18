@@ -234,6 +234,11 @@ do
   vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
   vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+  -- [[ Leandro's Keymaps ]]
+  vim.keymap.set('n', '<leader>co', ':CopilotChatOpen<cr>')
+  vim.keymap.set('n', '<leader>cc', ':CopilotChatClose<cr>')
+  vim.keymap.set('n', '<leader>cm', ':CopilotChatCommit<cr>')
+
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
   -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -307,6 +312,11 @@ do
 
       if name == 'LuaSnip' then
         if vim.fn.has 'win32' ~= 1 and vim.fn.executable 'make' == 1 then run_build(name, { 'make', 'install_jsregexp' }, ev.data.path) end
+        return
+      end
+
+      if name == 'CopilotChat.nvim' then
+        run_build(name, { 'make', 'tiktoken' }, ev.data.path)
         return
       end
 
@@ -1033,6 +1043,8 @@ do
   -- require 'custom.plugins.colorscheme'
   -- require 'custom.plugins.ui'
   -- require 'custom.plugins.git'
+  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
+  require 'custom.plugins'
 end
 
 -- The line beneath this is called `modeline`. See `:help modeline`
