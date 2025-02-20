@@ -245,6 +245,11 @@ do
   vim.keymap.set('n', '<leader>cc', ':CopilotChatClose<cr>')
   vim.keymap.set('n', '<leader>cm', ':CopilotChatCommit<cr>')
 
+  vim.keymap.set('n', '<F2>', ':w<cr>')
+
+  vim.keymap.set('n', '<F8>', ':bp<cr>')
+  vim.keymap.set('n', '<F9>', ':bn<cr>')
+
   -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
   -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
   -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
