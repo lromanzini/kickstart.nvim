@@ -216,6 +216,11 @@ vim.keymap.set('n', '<leader>co', ':CopilotChatOpen<cr>')
 vim.keymap.set('n', '<leader>cc', ':CopilotChatClose<cr>')
 vim.keymap.set('n', '<leader>cm', ':CopilotChatCommit<cr>')
 
+vim.keymap.set('n', '<F2>', ':w<cr>')
+
+vim.keymap.set('n', '<F8>', ':bp<cr>')
+vim.keymap.set('n', '<F9>', ':bn<cr>')
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
