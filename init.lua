@@ -170,7 +170,7 @@ vim.o.confirm = true
 
 -- Leandro
 -- Defines the cursor shape and behavior.
-vim.opt.guicursor = 'a:blinkon1'
+vim.opt.guicursor = 'a:blinkwait700-blinkoff400-blinkon250'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
