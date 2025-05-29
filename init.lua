@@ -718,12 +718,6 @@ require('lazy').setup({
         else
           return nil
         end
-        return {
-          -- Leandro
-          -- Adjust the timeout for formatting because prettierd is a bit slow.
-          timeout_ms = 2000,
-          lsp_format = lsp_format_opt,
-        }
       end,
       default_format_opts = {
         lsp_format = 'fallback', -- Use external formatters if configured below, otherwise use LSP formatting. Set to `false` to disable LSP formatting entirely.
