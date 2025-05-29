@@ -788,12 +788,6 @@ require('lazy').setup({
             lsp_format = 'fallback',
           }
         end
-        return {
-          -- Leandro
-          -- Adjust the timeout for formatting because prettierd is a bit slow.
-          timeout_ms = 2000,
-          lsp_format = lsp_format_opt,
-        }
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
