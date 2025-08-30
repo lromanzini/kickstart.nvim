@@ -631,7 +631,7 @@ require('lazy').setup({
 
         -- Leandro
         -- Ruby support
-        ruby_lsp = {},
+        solargraph = {},
 
         stylua = {}, -- Used to format Lua code
 
