@@ -864,6 +864,9 @@ do
       local enabled_filetypes = {
         -- lua = true,
         -- python = true,
+        -- Leandro
+        -- Enable autoformat on save for go files.
+        go = true,
       }
       if enabled_filetypes[vim.bo[bufnr].filetype] then
         return {
