@@ -867,6 +867,9 @@ do
         -- Leandro
         -- Enable autoformat on save for go files.
         go = true,
+        -- Leandro
+        -- Enable autoformat on save for javascript files.
+        javascript = true,
       }
       if enabled_filetypes[vim.bo[bufnr].filetype] then
         return {
