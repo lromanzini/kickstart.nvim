@@ -757,7 +757,10 @@ do
   ---@type table<string, vim.lsp.Config>
   local servers = {
     -- clangd = {},
-    -- gopls = {},
+
+    -- Leandro
+    -- Go support
+    gopls = {},
     -- pyright = {},
     -- tsc = {},
     --
