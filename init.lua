@@ -780,8 +780,38 @@ do
     ts_ls = {},
 
     -- Leandro
-    -- Ruby support
-    solargraph = {},
+    -- Ruby support com configurações avançadas
+    ruby_lsp = {
+      init_options = {
+        -- 'auto' detecta automaticamente o formatador do seu Gemfile (como RuboCop)
+        formatter = 'auto', 
+        -- Ativa o RuboCop ou Standard para linting/diagnósticos diretamente pelo LSP
+        linters = { 'rubocop' }, 
+        enabledFeatures = {
+          codeActions = true,
+          codeLens = true,
+          completion = true,
+          definition = true,
+          diagnostics = true,
+          formatting = true,
+          hover = true,
+          inlayHint = true, -- Ativa dicas inlay modernas do Neovim
+          signatureHelp = true,
+        },
+        featuresConfiguration = {
+          inlayHint = {
+            implicitHashValue = true, -- Mostra hints de chaves implícitas: foo(bar:) -> bar: bar
+            implicitRescue = true,    -- Mostra StandardError implícito nos rescue blocks
+          },
+        },
+        addonSettings = {
+          -- Se você usa Ruby on Rails, isso ativa suporte e atalhos específicos de Rails
+          ["Ruby LSP Rails"] = {
+            enablePendingMigrationsPrompt = true,
+          },
+        },
+      },
+    },
 
     stylua = {}, -- Used to format Lua code
 
