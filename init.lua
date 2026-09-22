@@ -241,10 +241,6 @@ do
   vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
   -- [[ Leandro's Keymaps ]]
-  vim.keymap.set('n', '<leader>co', ':CopilotChatOpen<cr>')
-  vim.keymap.set('n', '<leader>cc', ':CopilotChatClose<cr>')
-  vim.keymap.set('n', '<leader>cm', ':CopilotChatCommit<cr>')
-
   vim.keymap.set('n', '<F2>', ':w<cr>')
 
   vim.keymap.set('n', '<F8>', ':bp<cr>')
@@ -323,11 +319,6 @@ do
 
       if name == 'LuaSnip' then
         if vim.fn.has 'win32' ~= 1 and vim.fn.executable 'make' == 1 then run_build(name, { 'make', 'install_jsregexp' }, ev.data.path) end
-        return
-      end
-
-      if name == 'CopilotChat.nvim' then
-        run_build(name, { 'make', 'tiktoken' }, ev.data.path)
         return
       end
 
